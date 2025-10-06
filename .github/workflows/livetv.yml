@@ -1,4 +1,4 @@
-name: Live 24-7
+name: Live TV
 
 on:
   schedule:           
@@ -20,14 +20,14 @@ jobs:
       - name: 📦 Install dependencies
         run: pip install requests
 
-      - name: 🛠 Run 24-7.py Script
-        run: python 24-7.py
+      - name: 🛠 Run tv.py Script
+        run: python tv.py
 
       - name: 💾 Commit & Push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add 24-7.m3u8
+          git add livetv.m3u8
           git commit -m "Update playlist $(date -u +'%a %b %d %T UTC %Y')"
           git push
           
