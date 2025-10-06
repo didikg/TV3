@@ -78,8 +78,8 @@ for channel in valid_channels:
     m3u8_content += f'{channel["stream_url"]}\n'
 
 try:
-    with open("24-7.m3u8", "w", encoding="utf-8") as file:
+    with open("livetv.m3u8", "w", encoding="utf-8") as file:
         file.write(m3u8_content)
-    print(f"\n\nSuccess! Wrote {len(valid_channels)} valid streams to '24-7.m3u8'.")
+    print(f"\n\nSuccess! Wrote {len(valid_channels)} valid streams to 'livetv.m3u8'.")
 except Exception as e:
     print(f"\nError writing to file: {e}")
